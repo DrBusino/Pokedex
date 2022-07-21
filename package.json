@@ -1,0 +1,19 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrBusino/pokedex.git"
+  },
+  "author": "Pedro Casanova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrBusino/pokedex/issues"
+  },
+  "homepage": "https://github.com/DrBusino/pokedex#readme"
+}
