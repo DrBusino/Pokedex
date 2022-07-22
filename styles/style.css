@@ -10,6 +10,7 @@ html, body{
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
+    
 }
 
 header{
@@ -75,5 +76,64 @@ section#version section#swapVersion article#iconsSwapVersion{
     width: 10vw;
     border-radius: 5%;
     box-shadow: black 0px 3px 5px;
+}
+
+
+section#screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    
+}
+
+
+div#menu{
+    background-color: aqua;
+    width:12rem ;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 30px;
+    
+   display: flex;
+
+   
+}
+
+div#openMenu{
+    background-color: aqua;
+    width:17rem ;
+    height: 60vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 30px;
+
+}
+
+div.menu span#menuSpan{
+    margin-left: 1rem;
+    margin-top: .4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+
+
+
+
+:hover div.menu span#menuSpan{
+    cursor: pointer;
+}
+
+
+
+footer{
+  
+    bottom: 0;
+    font-size: .7rem;
 }
 
