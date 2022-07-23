@@ -72,11 +72,10 @@ section#version section#swapVersion article#iconsSwapVersion {
 section#screen {
   width: 100%;
   height: 100vh;
-  
 }
 
 div#menu {
-  background-color: rgba(222,14,49,255);;
+  background-color: rgba(222, 14, 49, 255);
   width: 12rem;
   height: 5vh;
   position: fixed;
@@ -85,22 +84,20 @@ div#menu {
   border-top-left-radius: 30px;
   border-top: solid black 1px;
   border-left: solid black 1px;
-  box-shadow: rgba(137,5,27,255) -3px -1px 15px ;
-
-  
+  box-shadow: rgba(137, 5, 27, 255) -3px -1px 15px;
 }
 
 div#openMenu {
-  background-color: rgba(222,14,49,255);
+  background-color: rgba(222, 14, 49, 255);
   width: 17rem;
   height: 60vh;
   position: fixed;
   bottom: 0;
   right: 0;
   border-top-left-radius: 30px;
-   border-top: solid black 1px;
+  border-top: solid black 1px;
   border-left: solid black 1px;
-  box-shadow: rgba(137,5,27,255) -4px -2px 15px ;
+  box-shadow: rgba(137, 5, 27, 255) -4px -2px 15px;
 }
 
 div.menu span#menuSpan {
@@ -112,15 +109,11 @@ div.menu span#menuSpan {
   font-size: 1.2rem;
 }
 
- div.menu span#menuSpan:hover {
+div.menu span#menuSpan:hover {
   cursor: pointer;
   font-size: 1.7rem;
   margin-top: 0;
-  
-  
 }
-
-
 
 footer {
   bottom: 0;

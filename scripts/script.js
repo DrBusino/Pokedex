@@ -19,6 +19,5 @@ menuSpan.addEventListener("click", () => {
   } else {
     menu.id = "openMenu";
     menuOpened = true;
-    
   }
 });
