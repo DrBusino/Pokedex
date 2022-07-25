@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index" 
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DrBusino/pokedex/issues"
   },
-  "homepage": "https://github.com/DrBusino/pokedex#readme"
+  "homepage": "https://github.com/DrBusino/pokedex#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

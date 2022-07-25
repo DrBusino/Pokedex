@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="icon"
-      href="./styles/img/ball-icon-168685.png"
+      href="./styles/img/pinpng.com-pokedex-png-6639208.png"
       type="image/x-icon"
     />
     <title>Pokedex</title>
@@ -20,30 +20,32 @@
     <header>
       <h1>Pokedex</h1>
     </header>
-    <section id="version">
-      <section id="cardsVersion">
-        <div class="cardVersion" id="cardVersion-1"></div>
-        <div class="cardVersion" id="cardVersion-2"></div>
-        <div class="cardVersion" id="cardVersion-3"></div>
-        <div class="cardVersion" id="cardVersion-4"></div>
-        <div class="cardVersion" id="cardVersionSelected"></div>
-        <div class="cardVersion" id="cardVersion-5"></div>
-        <div class="cardVersion" id="cardVersion-6"></div>
-        <div class="cardVersion" id="cardVersion-7"></div>
-        <div class="cardVersion" id="cardVersion-8"></div>
-      </section>
 
-      <section id="swapVersion">
-        <article id="iconsSwapVersion">
-          <span class="material-symbols-outlined"> fast_rewind </span>
-          <span class="material-symbols-outlined">fast_forward</span>
-        </article>
-      </section>
+    <section hidden id="versionsTab"></section>
+
+    <section id="version">
+      <h2 id="dropVersion">Versões</h2>
     </section>
 
     <section id="screen"></section>
     <div class="menu" id="menu">
       <span id="menuSpan" class="material-symbols-outlined"> menu </span>
+      <section id="menuContent">
+        <h3 id="menuContentTitle">Pesquisa:</h3>
+        <div class="srchPoke" id="srchName">
+          <p class="srchLabel" id="pokeName">Nome:</p>
+          <input type="text" />
+          <button class="btnSrchPoke" id="btnSrchName">Pesquisar</button>
+        </div>
+
+        <div class="srchPoke" id="srchNum">
+          <p class="srchLabel" id="pokeNum">Número:</p>
+          <input type="number" />
+          <button class="btnSrchPoke" id="btnSrchNum">Pesquisar</button>
+        </div>
+
+        <button id="advSearch">Pesquisa Avançada</button>
+      </section>
     </div>
     <footer>
       <p id="rights">
