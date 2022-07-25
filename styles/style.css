@@ -14,6 +14,7 @@ body {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
+  
 }
 
 header {
@@ -67,14 +68,15 @@ section#version {
   height: 1.5rem;
   background-color: rgb(116, 116, 116);
   align-self: center;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
   box-shadow: black 0px 10px 10px 1px;
   border-bottom: solid black 1px;
 
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: .1rem;
 }
 
 section#version:hover {
@@ -82,18 +84,79 @@ section#version:hover {
   width: 6.5vw;
   height: 1.6rem;
   font-size: 1.1rem;
+  margin: 0;
 }
 
-section#version h2#dropVersion {
+section#version p#dropVersion {
   font-size: 100%;
   padding: 0;
   margin-top: 2%;
+  
 }
+
+section#menuTop{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+section#menuTop article#artFound{
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: aqua;
+}
+
+
+
 
 section#screen {
   width: 100%;
-  height: 100vh;
+  max-height: fit-content;
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
+
+section#screen div.cardPoke {
+     background-color: rgb(255, 0, 0);
+      width: 10rem;
+      height: 10rem;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 30px;
+      
+      
+     
+}
+
+section#screen div.cardPoke img.pokePic{
+   max-width: 100%;
+   max-height: 100%;
+   padding: 1rem;
+   
+   
+  
+}
+
+section#screen div.cardPoke p.pokeName{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+
+
+
 
 div#menu {
   background-color: rgba(222, 14, 49, 255);
@@ -226,6 +289,7 @@ div#openMenu section#menuContent button#advSearch:hover {
 }
 
 footer {
+  position:static;
   bottom: 0;
   font-size: 0.7rem;
 }
