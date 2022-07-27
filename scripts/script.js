@@ -9,27 +9,23 @@ const cardPoke = document.querySelectorAll(".cardPoke");
 const foundCount = document.querySelector("#foundCount");
 const pokeName = document.querySelector(".pokeName");
 const btnIndex = document.querySelector("#btnIndex");
-
-const lisVersionAcc = [
-  "red",
-  "gold",
-  "ruby",
-  "emerald",
-  "firered",
-  "leafgreen",
-  "diamond",
-  "platinum",
-  "black",
-  "black-2",
-  "omega-ruby",
-];
+const blurScreen = document.querySelector("#blurScreen");
+const dataPoke = document.querySelector("#dataPoke");
+const dataPokePic = document.querySelector("#dataPokePic");
+const dataPokeImg = document.querySelector("#dataPokeImg");
+const dataPokeName = document.querySelector("#dataPokeName");
+const dataPokeNum = document.querySelector("#dataPokeNum");
+const dataPokeType = document.querySelector("#dataPokeType");
+const dataPokeDesc = document.querySelector("#dataPokeDesc");
+const dataPokeVersion = document.querySelector("#dataPokeVersion");
+const dataPokeAbi = document.querySelector("#dataPokeAbi");
 
 let menuOpened = false;
 
 getPokeSpec();
 setVersion();
 //getPokeName();
-getVersion();
+//getVersion();
 
 async function getPokeSpec() {
   const resp = await fetch(
@@ -55,26 +51,12 @@ async function getPokeSpec() {
     screen.appendChild(div);
     div.appendChild(img);
     div.appendChild(p);
+
+    div.addEventListener("click", () => {
+      blurScreen.hidden = false;
+    });
   });
   foundCount.innerText = list.length;
-}
-
-async function getVersion() {
-  const resp = await fetch(
-    "https://pokeapi.co/api/v2/pokemon-species?limit=100000&offset=0."
-  );
-  const data = await resp.json();
-  const list = data.results;
-
-  list.forEach((i) => {
-    async function getVersionId() {
-      const resp = await fetch(i.url);
-      const data = await resp.json();
-      const pokeVersion = data.flavor_text_entries[0].version;
-    }
-
-    getVersionId();
-  });
 }
 
 async function setVersion() {
@@ -99,16 +81,10 @@ async function setVersion() {
           );
           const data = await resp.json();
           const pokeVersionCheck = data.flavor_text_entries[0].version.name;
-          const getPokePic = data.varieties[0].pokemon.url;
+         
 
           if (pokeVersionCheck === div.innerText) {
             c++;
-            /*async function getPokemonPic (){
-              const resp = await fetch(getPokePic)
-              const data = await resp.json();
-              const pic = data.sprites.other.official-artwork.front_default 
-              
-            }*/
 
             const div = document.createElement("div");
             const img = document.createElement("img");
@@ -126,8 +102,14 @@ async function setVersion() {
             div.appendChild(img);
             div.appendChild(p);
 
-            console.log(pokeVersionCheck);
-            getPokemonPic();
+            div.addEventListener("click", () => {
+              blurScreen.hidden = false;
+              dataPokeImg.src = img.src;
+              dataPokeName.innerText = p.innerText;
+
+
+
+            });
           }
           foundCount.innerText = c;
         }
@@ -161,6 +143,12 @@ screen.addEventListener("click", () => {
 
   if (!versionsTab.hidden) {
     versionsTab.hidden = true;
+  }
+});
+
+blurScreen.addEventListener("click", (e) => {
+  if (e.target == e.currentTarget) {
+    blurScreen.hidden = true;
   }
 });
 
